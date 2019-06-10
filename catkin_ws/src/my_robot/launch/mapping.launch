@@ -6,7 +6,7 @@
   <arg name="rgb_topic"   default="/my_robot/rgb/image_raw"/>
   <arg name="depth_topic" default="/my_robot/depth/image_raw"/>
   <arg name="camera_info_topic" default="/my_robot/rgb/camera_info"/>
-  <arg name="scan_topic" default="/my_robot/laser/scan">
+  <arg name="scan_topic" default="/my_robot/laser/scan"/>
 
 
   <!-- Mapping Node -->
