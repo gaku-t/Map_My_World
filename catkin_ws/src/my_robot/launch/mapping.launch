@@ -6,6 +6,7 @@
   <arg name="rgb_topic"   default="/my_robot/rgb/image_raw"/>
   <arg name="depth_topic" default="/my_robot/depth/image_raw"/>
   <arg name="camera_info_topic" default="/my_robot/rgb/camera_info"/>
+  <arg name="scan_topic" default="/my_robot/laser/scan">
 
 
   <!-- Mapping Node -->
@@ -20,7 +21,7 @@
       <param name="subscribe_scan"      type="bool"   value="true"/>
 
       <!-- RTAB-Map Inputs -->
-      <remap from="scan" to="my_robot/laser/scan"/>
+      <remap from="scan" to="$(arg scan_topic)"/>
       <remap from="rgb/image" to="$(arg rgb_topic)"/>
       <remap from="depth/image" to="$(arg depth_topic)"/>
       <remap from="rgb/camera_info" to="$(arg camera_info_topic)"/>
